@@ -9,7 +9,7 @@ import {
 //the reducer will keep track of all the actions brought in from actionTypes as well as use initial state 
 //create the time slots that the users will be selecting.
 
-export default AppReducer = (state = initialState, action) => {
+export default appReducer = (state = initialState, action) => {
     switch(action.type) {
         case MODAL_TOGGLE:
             return {...state, open : !state.open}
