@@ -1,10 +1,39 @@
+import {
+    ADD_USER_INFO,
+    CHOOSE_TIME_SLOT,
+    UPDATE_USER_INFO,
+    MODAL_TOGGLE, 
 
-//Action to update user info
-export const ADD_USER_INFO = 'ADD_USER_INFO';
-//action to select a time slot for
-export const CHOOSE_TIME_SLOT = 'CHOOSE_TIME_SLOT';
-
-//action for updating the state of the user info and time slot selected
-export const SUBMIT_USER_INFO = 'SUBMIT_USER_INFO';
+} from './actionTypes'
 
 
+export const chooseTimeSlot = (userInput) => ({
+    type: CHOOSE_TIME_SLOT , payload: {
+        time: userInput.time,
+        name: userInput.name,
+        phone: userInput.phone,
+        filled: userInput.filled,
+    }
+});
+
+export const updateTimeSlot = (userData) => ({
+    type: ADD_USER_INFO, payload: {
+        user: userData
+    },
+    userData
+});
+
+export const editForm = (userInput) => ({
+    type: UPDATE_USER_INFO, payload: {
+        time: userInput.time,
+        name: userInput.name,
+        phone: userInput.phone,
+        filled: userInput.filled,
+
+    }
+    
+});
+
+export const ToggleModal = () => ({
+    type: MODAL_TOGGLE,
+});
