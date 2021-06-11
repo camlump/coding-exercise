@@ -1,3 +1,5 @@
+import React from 'react';
+import { chooseTimeSlot, editForm, updateTimeSlot, ToggleModal} from './actions/actions';
 
 import './App.css';
 
